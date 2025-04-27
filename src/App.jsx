@@ -6,7 +6,7 @@ import { getFarewellText, getRandomWord } from "./utils"
 import Confetti from "react-confetti"
 
 export default function App() {
-  const [currentWord, setCurrentWord] = useState('react')
+  const [currentWord, setCurrentWord] = useState(() => getRandomWord())
 
   const [guessedLetters, setGuessedLetters] = useState([])
 
